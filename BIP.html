@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIP | Strategic Growth & Leadership Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        :root { --bip-navy: #001B3D; --bip-blue: #00A3E0; --bip-red: #E4002B; }
+        body { font-family: 'Inter', sans-serif; color: #1A1A1A; background-color: #F8F9FA; }
+        
+        .page { display: none; animation: fadeIn 0.4s ease; }
+        .page.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .nav-link.active { color: var(--bip-red); border-bottom: 3px solid var(--bip-red); }
+        .bg-bip-navy { background-color: var(--bip-navy); }
+        .text-bip-red { color: var(--bip-red); }
+        .border-bip-red { border-color: var(--bip-red); }
+
+        .toggle-btn.active { background-color: var(--bip-red); color: white; border-color: var(--bip-red); box-shadow: 0 4px 12px rgba(228, 0, 43, 0.2); }
+        .data-card { transition: all 0.3s ease; border-top: 4px solid var(--bip-navy); }
+        .data-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body>
+
+    <nav class="bg-white border-b sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-3xl font-black text-bip-navy tracking-tighter">BIP<span class="text-bip-red">.</span></span>
+                <span class="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400 border-l pl-4 ml-3">UK Growth Strategy</span>
+            <div class="flex space-x-8 text-[11px] font-black uppercase tracking-widest">
+    <button onclick="nav('leadership')" id="nav-leadership" class="nav-link active pb-1">01. Leadership</button>
+    <button onclick="nav('opportunity')" id="nav-opportunity" class="nav-link pb-1">02. Opportunity</button>
+<button onclick="nav('goals')" id="nav-goals" class="nav-link pb-1">04. Goals</button>
+    <button onclick="nav('roadmap')" id="nav-roadmap" class="nav-link pb-1">03. Roadmap</button>
+   
+</div>
+        </div>
+    </nav>
+
+    <main id="page-leadership" class="page active max-w-7xl mx-auto p-6 md:p-12">
+        <div class="mb-12 border-b pb-8">
+            <h1 class="text-6xl font-black text-bip-navy tracking-tighter uppercase italic mb-6">Proven Sales Leader<span class="text-bip-red">.</span></h1>
+            <div class="space-y-2 border-l-4 border-bip-red pl-6">
+                <p class="text-xl font-bold text-bip-navy tracking-tight">• $220m+ revenue delivered & teams scaled in a highly competitive Google Cloud market.</p>
+                <p class="text-xl font-bold text-bip-navy tracking-tight">• 9+ years UK Enterprise, Corp and DN Tech Sales leadership.</p>
+            </div>
+        </div>
+
+        <div class="flex justify-center mb-12">
+            <div class="bg-white p-1 rounded-full shadow-inner border inline-flex space-x-1">
+                <button onclick="toggleEra('cognizant')" id="btn-cog" class="toggle-btn active px-10 py-3 rounded-full font-black text-xs uppercase transition-all">Cognizant Era ($210M Scale)</button>
+                <button onclick="toggleEra('searce')" id="btn-sea" class="toggle-btn px-10 py-3 rounded-full font-black text-xs uppercase text-gray-400 transition-all">Searce Era (Turnaround)</button>
+            </div>
+        </div>
+
+        <div id="era-cognizant" class="era-content space-y-10">
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="data-card bg-white p-6 shadow-sm">
+                    <p class="text-xs font-bold text-gray-400 uppercase mb-2">Pipeline Velocity</p>
+                    <p class="text-4xl font-black text-bip-navy">$520M</p>
+                    <p class="text-[11px] text-bip-red font-bold mt-1">Scaled from $44M in 18 Months</p>
+                </div>
+                <div class="data-card bg-white p-6 shadow-sm">
+                    <p class="text-xs font-bold text-gray-400 uppercase mb-2">Revenue Delivered</p>
+                    <p class="text-4xl font-black text-bip-navy">$210M</p>
+                    <p class="text-[11px] text-bip-red font-bold mt-1">10x Growth (from $20M base)</p>
+                </div>
+                <div class="data-card bg-white p-6 shadow-sm">
+                    <p class="text-xs font-bold text-gray-400 uppercase mb-2">Quota Achievement</p>
+                    <p class="text-4xl font-black text-bip-navy">150%</p>
+                    <p class="text-[11px] text-bip-red font-bold mt-1">Consistently 120-150% over 3 years</p>
+                </div>
+            </div>
+
+            <div class="bg-bip-navy p-10 text-white rounded-2xl relative overflow-hidden">
+                <div class="absolute right-0 top-0 w-64 h-64 bg-bip-red opacity-10 rounded-full -mr-20 -mt-20"></div>
+                <h3 class="text-2xl font-black italic uppercase mb-8 border-b border-white/10 pb-4">Market Execution & Ecosystem</h3>
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-bip-blue p-3 rounded-lg"><i data-lucide="layers"></i></div>
+                            <div>
+                                <h4 class="font-black uppercase text-sm mb-1">Vertical Dominance</h4>
+                                <p class="text-sm text-gray-400">Closed 12+ Enterprise deals ($8M-$50M) in Retail, HCLS, M&I, and Telco.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-bip-blue p-3 rounded-lg"><i data-lucide="map"></i></div>
+                            <div>
+                                <h4 class="font-black uppercase text-sm mb-1">Ecosystem Architecture</h4>
+                                <p class="text-sm text-gray-400 leading-relaxed">Built GTM plans for each vertical; established relationships across the Google ecosystem and partner network.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white/5 p-6 border border-white/10 rounded-xl">
+                        <p class="text-xs font-bold text-bip-red uppercase tracking-widest mb-4 italic">High Performance Culture</p>
+                        <p class="text-sm mb-4">Hired 6 Sales Leads & 3 Practice Heads. Reduced attrition to &lt;10%, creating the fastest-growing practice.</p>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center p-3 border border-white/10 rounded"><p class="text-xl font-bold">$18M</p><p class="text-[9px] uppercase">Ocado Retail</p></div>
+                            <div class="text-center p-3 border border-white/10 rounded"><p class="text-xl font-bold">$53M</p><p class="text-[9px] uppercase">Highbourne Group</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="era-searce" class="era-content hidden space-y-10">
+            <div class="bg-white border rounded-2xl p-10 shadow-sm">
+                <h3 class="text-2xl font-black text-bip-navy mb-10 italic uppercase border-b pb-4">Strategic Turnaround Toolkit</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-bip-red"><i data-lucide="clipboard-list"></i></div>
+                        <h4 class="font-black uppercase text-xs tracking-wider text-bip-navy">BDR Groundwork</h4>
+                        <ul class="text-[11px] space-y-2 text-gray-500">
+                            <li>• Stakeholder mapping & persona based messaging</li>
+                            <li>• Quantified ROI & Google consumption views for FSR/FSMs</li>
+                            <li>• Credibility through "Above & Beyond" attitude</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-bip-red"><i data-lucide="handshake"></i></div>
+                        <h4 class="font-black uppercase text-xs tracking-wider text-bip-navy">50:50 Relationship</h4>
+                        <ul class="text-[11px] space-y-2 text-gray-500">
+                            <li>• Massive outreach campaigns (Partners bringing leads vs handouts)</li>
+                            <li>• Leveraged deep Cognizant-era relationships</li>
+                            <li>• Elevated Searce profile in Google Ecosystem</li>
+                        </ul>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-slate-100 flex items-center justify-center text-bip-red"><i data-lucide="flask-conical"></i></div>
+                        <h4 class="font-black uppercase text-xs tracking-wider text-bip-navy">Technical Co-Innovation</h4>
+                        <ul class="text-[11px] space-y-2 text-gray-500">
+                            <li>• MVPs, demos, and customer-specific pilots</li>
+                            <li>• Compelling outcome focused narratives & PoVs</li>
+                            <li>• Showcase value across Google ecosystem</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="bg-bip-navy p-10 rounded-2xl text-white">
+                    <h3 class="text-xl font-black italic uppercase text-bip-blue mb-6">Global Scale & Mentorship</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="p-3 bg-white/5 rounded"><i data-lucide="globe" class="text-bip-red"></i></div>
+                            <div><p class="text-sm font-bold">Success Replication</p><p class="text-xs text-gray-400">Expanded UK success model to operations across MEA.</p></div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="p-3 bg-white/5 rounded"><i data-lucide="book-open" class="text-bip-red"></i></div>
+                            <div><p class="text-sm font-bold">Verticalized GTM</p><p class="text-xs text-gray-400">Sales motions precisely aligned to Google priorities.</p></div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="p-3 bg-white/5 rounded"><i data-lucide="users" class="text-bip-red"></i></div>
+                            <div><p class="text-sm font-bold">Team Mentorship</p><p class="text-xs text-gray-400">Trained teams to adopt structured pipe-gen approach.</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white border p-10 rounded-2xl">
+                    <div class="grid grid-cols-2 gap-4 mb-6 text-center">
+                        <div class="bg-slate-50 p-4 border rounded"><p class="text-2xl font-black text-bip-red">$35M</p><p class="text-[10px] uppercase font-bold text-gray-400">Revenue</p></div>
+                        <div class="bg-slate-50 p-4 border rounded"><p class="text-2xl font-black text-bip-red">160%</p><p class="text-[10px] uppercase font-bold text-gray-400">Quota</p></div>
+                    </div>
+                    <div class="bg-bip-light-blue p-4 rounded text-center mb-4"><p class="text-xs font-black text-bip-navy uppercase tracking-widest">UK&I Partner of the Year</p></div>
+                    <div class="grid grid-cols-3 gap-2 text-center text-[9px] font-bold">
+                        <div class="p-1 border">Tata Steel $2.5M</div>
+                        <div class="p-1 border">Ufonia $1M</div>
+                        <div class="p-1 border">Ice Travel $580k</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <main id="page-opportunity" class="page max-w-7xl mx-auto p-6 md:p-12">
+    <div class="mb-10 flex justify-between items-end">
+        <div>
+            <h2 class="text-4xl font-black text-[#001B3D] italic uppercase tracking-tighter">Cloud Market Overview</h2>
+            <p class="text-gray-400 font-bold uppercase tracking-widest text-[10px] mt-1">Strategic Landscape 2025-2026</p>
+        </div>
+        <div class="text-right">
+            <span class="bg-[#E4002B] text-white px-3 py-1 text-[10px] font-black italic uppercase tracking-widest">BIP Insights</span>
+        </div>
+    </div>
+
+    <div class="bg-[#010c1a] p-6 rounded-3xl grid grid-cols-1 md:grid-cols-12 gap-6 text-white shadow-2xl">
+        
+        <div class="md:col-span-4 bg-[#0a192f] border border-white/10 rounded-2xl p-8 flex flex-col justify-between min-h-[320px]">
+            <div class="flex justify-between items-start">
+                <p class="text-gray-400 text-[10px] uppercase font-black tracking-widest">Global Cloud Market</p>
+                <i data-lucide="globe" class="text-[#00A3E0] opacity-50"></i>
+            </div>
+            <div>
+                <h3 class="text-7xl font-black tracking-tighter">$46B</h3>
+                <p class="text-[#00A3E0] text-sm mt-2 font-bold italic tracking-tight">Projected UK Size by 2026</p>
+            </div>
+            <div class="space-y-4 mt-8">
+                <div>
+                    <div class="flex justify-between text-[10px] mb-2 font-bold uppercase tracking-tighter">
+                        <span>IT Spend on Cloud</span>
+                        <span class="text-[#00A3E0]">51%</span>
+                    </div>
+                    <div class="h-2 w-full bg-[#1e293b] rounded-full overflow-hidden">
+                        <div class="h-full bg-[#00A3E0]" style="width: 51%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:col-span-5 bg-[#00A3E0] rounded-2xl p-8 flex flex-col justify-between text-white relative overflow-hidden group">
+            <div class="absolute right-[-10%] top-[10%] opacity-20 group-hover:scale-110 transition-transform duration-500">
+                <i data-lucide="trending-up" size="180"></i>
+            </div>
+            <div class="relative z-10">
+                <p class="text-white/80 text-[10px] uppercase font-black tracking-widest">Growth Velocity</p>
+                <h3 class="text-6xl font-black tracking-tighter mt-4">18.9%</h3>
+                <p class="text-white font-bold italic text-sm mt-2">Public Cloud CAGR through 2026</p>
+            </div>
+            <div class="relative z-10 bg-black/10 p-4 rounded-xl border border-white/10 mt-6">
+                <p class="text-xs font-black uppercase tracking-widest text-white">GCP YoY Revenue Growth</p>
+                <div class="flex items-center space-x-4 mt-2">
+                    <span class="text-4xl font-black">34%</span>
+                    <p class="text-[10px] opacity-80 leading-tight">Fastest growing hyperscaler in the UK market</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:col-span-3 bg-[#0a192f] border border-white/10 rounded-2xl p-6 flex flex-col items-center justify-between text-center">
+            <p class="text-gray-400 text-[10px] uppercase font-black tracking-widest mb-4">Multi-Cloud Shift</p>
+            <div class="relative w-40 h-20 overflow-hidden">
+                <div class="absolute top-0 left-0 w-40 h-40 border-[12px] border-[#1e293b] rounded-full"></div>
+                <div class="absolute top-0 left-0 w-40 h-40 border-[12px] border-[#00A3E0] rounded-full" style="clip-path: polygon(0 0, 100% 0, 100% 46%, 0 46%);"></div>
+                <div class="absolute bottom-0 left-1/2 -translate-x-1/2 mb-1">
+                    <span class="text-3xl font-black">46%</span>
+                </div>
+            </div>
+            <p class="text-[10px] text-gray-500 mt-4 uppercase font-bold leading-tight">Enterprises using 2+ Hyperscalers</p>
+            <div class="mt-6 w-full pt-6 border-t border-white/5">
+                <p class="text-[#E4002B] font-black text-xs uppercase tracking-widest">Tipping Point</p>
+                <p class="text-[9px] text-gray-400 mt-1 italic">Transition to outcome-based rewards</p>
+            </div>
+        </div>
+
+        <div class="md:col-span-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-[#0a192f] border border-white/10 p-4 rounded-xl flex items-center justify-between">
+                <div>
+                    <p class="text-[10px] font-black text-gray-400 uppercase">Google Cloud (GCP)</p>
+                    <p class="text-2xl font-black text-[#4285F4]">13% <span class="text-[10px] opacity-50 font-normal ml-1">Market Share</span></p>
+                </div>
+                <div class="bg-[#4285F4]/20 p-2 rounded-lg text-[#4285F4]">
+                    <i data-lucide="cloud-lightning"></i>
+                </div>
+            </div>
+            <div class="bg-[#E4002B]/10 border border-[#E4002B]/30 p-4 rounded-xl flex items-center justify-between relative overflow-hidden">
+                <div class="relative z-10">
+                    <p class="text-[#E4002B] text-[10px] font-black uppercase tracking-widest">Mid-Market Focus</p>
+                    <p class="text-xs font-bold leading-tight mt-1">Replicating AWS success in high-velocity segments</p>
+                </div>
+                <i data-lucide="rocket" class="text-[#E4002B] opacity-30 absolute right-[-5px] bottom-[-5px]" size="48"></i>
+            </div>
+            <div class="bg-[#0a192f] border border-white/10 p-4 rounded-xl flex items-center justify-between">
+                <div>
+                    <p class="text-[10px] font-black text-gray-400 uppercase">BIP Capability</p>
+                    <p class="text-xs font-bold leading-tight mt-1">Scaling across Data, AI, & App Modernisation</p>
+                </div>
+                <div class="bg-[#00A3E0]/20 p-2 rounded-lg text-[#00A3E0]">
+                    <i data-lucide="cpu"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-8 grid md:grid-cols-3 gap-8 text-sm">
+        <div class="flex items-center space-x-4 border-l-2 border-[#00A3E0] pl-4">
+            <p class="text-xs text-gray-500 leading-relaxed italic">Leveraging BIP's proven Italian credentials to bridge the UK capacity gap and drive "Closed-Won" outcomes.</p>
+        </div>
+        <div class="flex items-center space-x-4 border-l-2 border-[#E4002B] pl-4">
+            <p class="text-xs text-gray-500 leading-relaxed italic">Enterprise remains a focus but Mid-Market is a key focus for Google this year to capture high-velocity growth.</p>
+        </div>
+        <div class="flex items-center justify-end">
+            <p class="text-[10px] font-black uppercase text-gray-400">© 2026 BIP Strategic Growth Strategy</p>
+        </div>
+    </div>
+</main>
+
+<main id="page-goals" class="page max-w-7xl mx-auto p-6 md:p-12">
+    
+    <div class="mb-12 border-b border-gray-200 pb-8">
+        <h1 class="text-6xl font-black text-[#001B3D] tracking-tighter uppercase italic mb-6">Strategic Mission<span class="text-[#E4002B]">.</span></h1>
+        <p class="text-xl text-gray-500 font-medium italic">Transforming BIP from an Emerging UK Brand to a Top-Tier GCP Powerhouse.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8 mb-12">
+        <div class="bg-[#001B3D] text-white p-10 rounded-3xl relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-32 h-32 bg-[#00A3E0] opacity-10 rounded-full -mr-16 -mt-16"></div>
+            <h3 class="text-2xl font-black uppercase italic mb-8 flex items-center">
+                <i data-lucide="shield-check" class="mr-3 text-[#00A3E0]"></i> Competitive Edge
+            </h3>
+            <div class="space-y-6">
+                <div class="flex items-start space-x-4">
+                    <div class="bg-white/10 p-2 rounded"><i data-lucide="map-pin" class="w-5 h-5"></i></div>
+                    <div>
+                        <p class="font-bold text-[#00A3E0]">Proven Italian Excellence</p>
+                        <p class="text-sm opacity-80">Credibility established via <span class="text-white font-bold">xTech & Datwave</span>.</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-4">
+                    <div class="bg-white/10 p-2 rounded"><i data-lucide="users" class="w-5 h-5"></i></div>
+                    <div>
+                        <p class="font-bold text-[#00A3E0]">Technical Depth</p>
+                        <p class="text-sm opacity-80">Large pool of GCP technical resources and Solutions Engineers.</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-3 bg-white/5 p-4 rounded-xl border border-white/10">
+                    <i data-lucide="award" class="text-[#FBBC05]"></i>
+                    <span class="text-xs font-black uppercase tracking-widest">Google Premier Partner</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white p-10 rounded-3xl border border-gray-200 shadow-sm flex flex-col justify-center">
+            <h3 class="text-2xl font-black text-[#001B3D] uppercase italic mb-6">The Pivot</h3>
+            <div class="space-y-6">
+                <div class="flex items-center space-x-4 text-gray-400 italic">
+                    <span class="w-12 h-px bg-gray-300"></span>
+                    <span class="text-sm uppercase font-bold tracking-widest">From Reactive Business</span>
+                </div>
+                <p class="text-sm text-gray-600 pl-16">Historically GCP found and led opportunities; reliance on lead-gen handouts.</p>
+                <div class="flex items-center space-x-4 text-[#E4002B]">
+                    <span class="w-12 h-px bg-[#E4002B]"></span>
+                    <span class="text-sm uppercase font-black tracking-widest">To Market Export</span>
+                </div>
+                <p class="text-sm text-[#001B3D] pl-16 font-bold leading-relaxed">
+                    The Opportunity: Leverage global capability to dominate the UK&I market as an aggressive, high-value emerging brand.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+        <div class="bg-white p-8 rounded-2xl border-t-4 border-[#E4002B] shadow-sm">
+            <p class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-4">Revenue Goal (Y1)</p>
+            <p class="text-5xl font-black text-[#001B3D] mb-2 italic">$5M</p>
+            <p class="text-xs font-bold text-[#E4002B] uppercase">BIP Services Revenue</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl border-t-4 border-[#00A3E0] shadow-sm">
+            <p class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-4">Pipeline Velocity</p>
+            <p class="text-5xl font-black text-[#001B3D] mb-2 italic">4 - 8</p>
+            <p class="text-xs font-bold text-[#00A3E0] uppercase">Qualified Opps / Month</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl border-t-4 border-[#001B3D] shadow-sm">
+            <p class="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-4">Market Status</p>
+            <p class="text-2xl font-black text-[#001B3D] leading-tight uppercase italic">Top Tier Partner</p>
+            <p class="text-xs font-bold text-gray-400 uppercase mt-2">Enterprise & Large Mid-Market</p>
+        </div>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8">
+        <div class="bg-white border border-gray-200 rounded-3xl p-10">
+            <h3 class="text-xl font-black text-[#001B3D] uppercase mb-8 border-b pb-4 italic">GTM Framework</h3>
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <div class="text-3xl font-black text-[#E4002B] mb-2 italic">3x3x3</div>
+                    <p class="text-xs font-bold uppercase tracking-widest text-gray-400">Attack Segments</p>
+                    <p class="text-xs text-gray-500 mt-2">Focused accounts and sales motion for laser-lock precision.</p>
+                </div>
+                <div>
+                    <div class="text-3xl font-black text-[#00A3E0] mb-2 italic">Outcome</div>
+                    <p class="text-xs font-bold uppercase tracking-widest text-gray-400">Outcome Focussed</p>
+                    <p class="text-[10px] text-gray-500 mt-2 leading-relaxed italic">
+                        Retail e.g.: ROAS +43% | AOV +9% via Hyper-personalisation.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-10 p-4 bg-gray-50 rounded-xl border-l-4 border-[#001B3D]">
+                <p class="text-xs font-bold text-[#001B3D] uppercase tracking-widest mb-2">Customer Funded Focus</p>
+                <p class="text-xs text-gray-600 italic">Prioritize direct customer-funded opportunities over Google-funded to maximize recurring revenue potential.</p>
+            </div>
+        </div>
+
+        <div class="bg-[#010c1a] text-white p-10 rounded-3xl relative">
+            <h3 class="text-xl font-black uppercase mb-8 italic text-[#00A3E0]">BIP <> Google Governance</h3>
+            <div class="space-y-8">
+                <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                    <span class="text-xs font-black uppercase text-[#E4002B]">Strategic Layer</span>
+                    <span class="text-[10px] font-medium opacity-70 italic uppercase">FSDs, FSMs, PDMs, Vertical Leads</span>
+                </div>
+                <div class="flex items-center justify-between border-b border-white/10 pb-4">
+                    <span class="text-xs font-black uppercase text-[#00A3E0]">Tactical Layer</span>
+                    <span class="text-[10px] font-medium opacity-70 italic uppercase">FSRs, CEs</span>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="text-xs font-black uppercase text-white">Customer Layer</span>
+                    <span class="text-[10px] font-medium opacity-70 italic uppercase">New and Existing Accounts</span>
+                </div>
+            </div>
+            <p class="mt-8 text-[10px] text-gray-500 uppercase font-black tracking-widest text-center">Laser lock on target accounts</p>
+        </div>
+    </div>
+</main>
+
+
+
+   <main id="page-roadmap" class="page max-w-7xl mx-auto p-6 md:p-12">
+    
+    <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+        <div>
+            <h2 class="text-5xl font-black text-[#001B3D] italic uppercase tracking-tighter">Strategic Journey</h2>
+            <p class="text-gray-400 font-bold uppercase tracking-widest text-xs mt-1">3-Year Sequential Execution Plan</p>
+        </div>
+        <div class="bg-[#E4002B] text-white p-6 shadow-xl transform skew-x-[-12deg]">
+            <div class="transform skew-x-[12deg] text-center">
+                <p class="text-[10px] font-bold uppercase tracking-widest opacity-80">2-Year Revenue Target</p>
+                <p class="text-4xl font-black italic">£17.0M</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-[#010c1a] p-8 rounded-3xl mb-12 text-white border border-white/10 shadow-2xl overflow-x-auto">
+        <h3 class="text-xs font-black uppercase tracking-[0.3em] text-[#00A3E0] mb-10 italic">Linear Timeline: Foundation → Acceleration → Scale</h3>
+        <div class="min-w-[800px]">
+            <div class="grid grid-cols-36 gap-0 mb-2 text-[9px] font-black uppercase text-gray-500 tracking-widest border-b border-white/5 pb-2">
+                <div class="col-span-12 border-r border-white/10">0-6 Months (Foundation)</div>
+                <div class="col-span-12 border-r border-white/10 pl-2">7-12 Months (Acceleration)</div>
+                <div class="col-span-12 pl-2">13-24 Months (Dominance)</div>
+            </div>
+            <div class="space-y-8 pt-6">
+                <div class="grid grid-cols-36 gap-0 items-center">
+                    <div class="col-span-6 bg-[#E4002B] h-4 rounded-sm shadow-[0_0_15px_rgba(228,0,43,0.4)] relative">
+                        <span class="absolute -top-6 left-0 text-[10px] font-bold text-white whitespace-nowrap">PHASE 1</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-36 gap-0 items-center">
+                    <div class="col-span-6"></div>
+                    <div class="col-span-12 bg-[#00A3E0] h-4 rounded-sm shadow-[0_0_15px_rgba(0,163,224,0.4)] relative">
+                        <span class="absolute -top-6 left-0 text-[10px] font-bold text-white whitespace-nowrap">PHASE 2</span>
+                    </div>
+                </div>
+                <div class="grid grid-cols-36 gap-0 items-center">
+                    <div class="col-span-18"></div>
+                    <div class="col-span-18 bg-white/20 h-4 rounded-sm border border-white/30 relative text-white">
+                        <span class="absolute -top-6 left-0 text-[10px] font-bold text-white whitespace-nowrap">PHASE 3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-center mb-10">
+        <div class="bg-gray-200 p-1 rounded-full flex space-x-1 shadow-inner">
+            <button onclick="roadmapTab('p1')" id="rtab-p1" class="roadmap-tab active px-6 py-2 rounded-full font-black text-[10px] uppercase transition-all bg-[#001B3D] text-white">Phase 1 Detail</button>
+            <button onclick="roadmapTab('p2')" id="rtab-p2" class="roadmap-tab px-6 py-2 rounded-full font-black text-[10px] uppercase transition-all text-gray-500">Phase 2 Detail</button>
+            <button onclick="roadmapTab('p3')" id="rtab-p3" class="roadmap-tab px-6 py-2 rounded-full font-black text-[10px] uppercase transition-all text-gray-500">Phase 3 Detail</button>
+        </div>
+    </div>
+
+    <div id="roadmap-p1" class="roadmap-content active animate-in fade-in slide-in-from-bottom-4 duration-500">
+        <div class="grid lg:grid-cols-3 gap-6">
+            
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-2xl border shadow-sm relative overflow-hidden group">
+                    <div class="absolute -right-4 -bottom-4 text-[#001B3D] opacity-5 group-hover:scale-110 transition-transform"><i data-lucide="users" size="80"></i></div>
+                    <h4 class="text-xs font-black text-gray-400 uppercase tracking-widest mb-4 italic">The "Scaled Team" Play</h4>
+                    <p class="text-sm font-bold text-[#001B3D] leading-tight mb-4">Re-purpose or double-up Sales Engineers as Sales Specialists.</p>
+                    <div class="flex items-center space-x-2 text-[#E4002B]">
+                        <i data-lucide="shield-check" size="16"></i>
+                        <span class="text-[10px] font-black uppercase">Result: Perceived as a Scaled Team (No 1-man army)</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border shadow-sm border-l-4 border-[#001B3D]">
+                    <h4 class="text-xs font-black text-gray-400 uppercase tracking-widest mb-4 italic">Resource & ROI</h4>
+                    <ul class="text-[11px] space-y-3 text-gray-600 font-medium">
+                        <li class="flex items-start"><i data-lucide="chevron-right" class="w-4 h-4 mr-2 text-bip-red"></i> <span>Hiring plan for Sales, Presales, and Lead Gen.</span></li>
+                        <li class="flex items-start"><i data-lucide="chevron-right" class="w-4 h-4 mr-2 text-bip-red"></i> <span>Leverage Italy's xTech/Datwave proof points to build credibility.</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border shadow-sm border-t-4 border-[#E4002B]">
+                <h4 class="text-xs font-black text-gray-400 uppercase tracking-widest mb-6 italic text-center">GTM: The 50:50 Co-Sell Model</h4>
+                
+                <div class="space-y-6">
+                    <div class="flex flex-col items-center text-center p-4 bg-slate-50 rounded-xl">
+                        <i data-lucide="crosshair" class="text-bip-red mb-2"></i>
+                        <p class="text-[10px] font-black uppercase">3x3x3 Attack Motion</p>
+                        <p class="text-[9px] text-gray-500">Focused segments, accounts, and sales motions.</p>
+                    </div>
+
+                    <div class="flex justify-between items-center px-4">
+                        <div class="text-center">
+                            <p class="text-2xl font-black text-bip-navy">20+</p>
+                            <p class="text-[9px] font-bold uppercase text-gray-400">Joint Opps</p>
+                        </div>
+                        <div class="h-8 w-px bg-gray-200"></div>
+                        <div class="text-center">
+                            <p class="text-2xl font-black text-bip-navy">10</p>
+                            <p class="text-[9px] font-bold uppercase text-gray-400">Italy GCP Wins</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#001B3D] text-white p-4 rounded-xl">
+                        <h5 class="text-[9px] font-black uppercase mb-3 text-bip-blue">Google Ecosystem Governance</h5>
+                        <div class="space-y-2">
+                            <div class="flex justify-between text-[9px] border-b border-white/10 pb-1">
+                                <span class="font-bold">STRATEGIC</span>
+                                <span class="opacity-60">FSD, FSM, PDM</span>
+                            </div>
+                            <div class="flex justify-between text-[9px]">
+                                <span class="font-bold">TACTICAL</span>
+                                <span class="opacity-60">FSR, CE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-bip-navy p-6 rounded-2xl text-white relative">
+                    <h4 class="text-xs font-black text-blue-300 uppercase tracking-widest mb-4 italic">Quick Wins Toolkit</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <span class="w-8 h-8 rounded bg-white/10 flex items-center justify-center text-bip-red font-bold">01</span>
+                            <p class="text-[11px] leading-tight font-medium">Mine relationships with previous customers (Personal Credibility).</p>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="w-8 h-8 rounded bg-white/10 flex items-center justify-center text-bip-red font-bold">02</span>
+                            <p class="text-[11px] leading-tight font-medium">Identify low-hanging fruit in Italy/MEA landscape.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border shadow-sm border-l-4 border-bip-blue">
+                    <h4 class="text-xs font-black text-gray-400 uppercase tracking-widest mb-2 italic">Engagement Play</h4>
+                    <p class="text-[10px] font-bold text-bip-navy uppercase mb-3 underline italic">Not asking for leads.</p>
+                    <p class="text-[11px] text-gray-600 leading-relaxed mb-4">
+                        "Ask how they plan to hit commit numbers and position BIP to help them hit <strong>Q2 and Year 1 targets</strong>."
+                    </p>
+                    <div class="bg-bip-blue/10 p-2 rounded text-center">
+                        <p class="text-[9px] font-black text-bip-blue uppercase">Trojan Horse: GenAI Assessments</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="roadmap-p2" class="roadmap-content hidden animate-in fade-in zoom-in duration-300">
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-[#001B3D] text-white p-8 rounded-2xl">
+                <h4 class="text-lg font-black italic uppercase text-[#00A3E0] mb-4">Acceleration (7-12M)</h4>
+                <ul class="text-[11px] space-y-4 opacity-80 leading-relaxed">
+                    <li>• <strong>Local Star:</strong> Land first significant UK deal (DWH Modernisation) — "A local client is worth 20 in Italy."</li>
+                    <li>• <strong>Roundtables:</strong> Target C-suite with AI for Retail Innovation and CX topics.</li>
+                    <li>• <strong>Specializations:</strong> Achieve Data Analytics & GenAI partner status.</li>
+                </ul>
+            </div>
+            <div class="bg-white border-4 border-[#00A3E0] p-8 rounded-2xl text-center flex flex-col justify-center shadow-lg">
+                <p class="text-[10px] font-black text-gray-400 uppercase tracking-widest">Pipeline Target</p>
+                <p class="text-5xl font-black text-[#001B3D] my-2 italic">$15.0M</p>
+                <p class="text-xs font-bold text-[#00A3E0] uppercase">Qualified Opportunities</p>
+            </div>
+            <div class="bg-white border p-8 rounded-2xl border-l-4 border-bip-red shadow-sm">
+                <h4 class="text-sm font-black text-[#001B3D] uppercase mb-4">Conversion Play</h4>
+                <p class="text-xs text-gray-500 mb-4">Convert the initial 3 wins into full production-scale enterprise projects.</p>
+                <div class="p-3 bg-slate-50 rounded border text-[10px] font-bold text-bip-navy">
+                    <i data-lucide="handshake" class="inline w-3 h-3 mr-1"></i> ISV Co-innovation for Vertical Solutions
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="roadmap-p3" class="roadmap-content hidden animate-in fade-in zoom-in duration-300">
+        <div class="bg-bip-navy p-10 rounded-[2.5rem] text-white relative overflow-hidden shadow-2xl">
+            <div class="absolute right-0 bottom-0 opacity-10"><i data-lucide="award" size="200"></i></div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h4 class="text-3xl font-black italic uppercase text-[#00A3E0] mb-6 tracking-tighter">Market Dominance</h4>
+                    <p class="text-sm opacity-70 mb-8 leading-relaxed italic">Transition into high-margin Managed Services. Build 3-5x revenue multiplier via new logos and expansions.</p>
+                    <div class="bg-[#E4002B] p-6 rounded-2xl shadow-xl">
+                        <div class="flex justify-between items-center mb-4">
+                            <p class="text-xs font-bold uppercase">Year 2 Projections</p>
+                            <p class="text-4xl font-black italic tracking-tighter text-white">$12.0M</p>
+                        </div>
+                        <div class="grid grid-cols-2 text-[10px] gap-2 uppercase font-black">
+                            <div class="bg-white/10 p-2 rounded">Win Rate: 41%</div>
+                            <div class="bg-white/10 p-2 rounded">AOV: $300k</div>
+                            <div class="bg-white/10 p-2 rounded col-span-2">Revenue / Head: $2.4M</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-between">
+                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+                        <p class="text-[10px] font-black uppercase text-[#00A3E0] italic mb-4">Year 1 Benchmarks</p>
+                        <div class="space-y-3 text-sm">
+                            <p class="flex justify-between border-b border-white/5 pb-1"><span>Revenue</span> <span class="font-bold">$5.0M</span></p>
+                            <p class="flex justify-between border-b border-white/5 pb-1"><span>AOV</span> <span class="font-bold">$150k</span></p>
+                            <p class="flex justify-between"><span>Win Rate</span> <span class="font-bold">34%</span></p>
+                        </div>
+                    </div>
+                    <div class="mt-8 flex items-center space-x-3 text-bip-blue">
+                        <i data-lucide="award" class="w-8 h-8"></i>
+                        <p class="text-[10px] font-black uppercase tracking-widest">Target: UK/Ireland Google Cloud Partner Award</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    function roadmapTab(phase) {
+        document.querySelectorAll('.roadmap-content').forEach(c => c.classList.add('hidden'));
+        document.getElementById('roadmap-' + phase).classList.remove('hidden');
+        document.querySelectorAll('.roadmap-tab').forEach(b => {
+            b.classList.remove('bg-[#001B3D]', 'text-white', 'active');
+            b.classList.add('text-gray-500');
+        });
+        const activeBtn = document.getElementById('rtab-' + phase);
+        activeBtn.classList.add('bg-[#001B3D]', 'text-white', 'active');
+        activeBtn.classList.remove('text-gray-500');
+        lucide.createIcons();
+    }
+</script>
+
+<script>
+    function roadmapTab(phase) {
+        // Hide all phase contents
+        document.querySelectorAll('.roadmap-content').forEach(c => c.classList.add('hidden'));
+        document.getElementById('roadmap-' + phase).classList.remove('hidden');
+
+        // Reset tab button styles
+        document.querySelectorAll('.roadmap-tab').forEach(b => {
+            b.classList.remove('bg-[#001B3D]', 'text-white', 'active');
+            b.classList.add('text-gray-500');
+        });
+
+        // Set active button style
+        const activeBtn = document.getElementById('rtab-' + phase);
+        activeBtn.classList.add('bg-[#001B3D]', 'text-white', 'active');
+        activeBtn.classList.remove('text-gray-500');
+        
+        lucide.createIcons();
+    }
+</script>
+
+    <footer class="py-12 border-t text-center">
+        <p class="text-[10px] font-black uppercase tracking-[0.5em] text-gray-400">© 2026 BIP Strategic Growth | Confidential Presentation</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        function nav(pageId) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById('page-' + pageId).classList.add('active');
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+            document.getElementById('nav-' + pageId).classList.add('active');
+            window.scrollTo(0,0);
+            lucide.createIcons();
+        }
+        function toggleEra(era) {
+            document.querySelectorAll('.era-content').forEach(c => c.classList.add('hidden'));
+            document.getElementById('era-' + era).classList.remove('hidden');
+            document.querySelectorAll('.toggle-btn').forEach(b => {
+                b.classList.remove('active');
+                b.classList.add('text-gray-400');
+            });
+            const activeBtn = document.getElementById('btn-' + (era === 'cognizant' ? 'cog' : 'sea'));
+            activeBtn.classList.add('active');
+            activeBtn.classList.remove('text-gray-400');
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>
